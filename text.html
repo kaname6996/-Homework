@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<title>SVG 向量繪圖 - 基本教學+進階(10.11)</title>
+<script>
+var svg;
+window.onload=function(){
+svg=document.getElementById("svg");
+svg.addEventListener("mousedown",mousedownSvg)}
+function mousedownSvg(e)
+{
+var x=e.clientX
+var y=e.clientY
+var bounding=this.getBoundingClientRect() //svg原件的座標
+x=x-bounding.left //svg原件左上角的x座標
+y=y-bounding.top //svg原件左上角的y座標
+
+
+//加入一個方塊
+var rect=createSvgElement(rect,{"x":x,"y":y,"width":100,"height":100,"fill":"black"})
+this.appendChild(rect)
+
+
+
+
+
+}
+
+
+
+
+/*
+var line=document.createElementNS("http://www.w3.org/2000/svg","line") //產生一個<line>的標籤
+line.setAttribute("x1",50)
+line.setAttribute("y1",50)
+line.setAttribute("y1",350)
+line.setAttribute("y1",350)
+line.setAttribute("stroke","red")
+line.setAttribute("stroke-width",2)
+svg.appendChild(line)
+
+var circle=document.createElementNS("http://www.w3.org/2000/svg","circle") //產生一個<line>的標籤
+circle.setAttribute("cx",100)
+circle.setAttribute("cy",200)
+circle.setAttribute("r",50)
+circle.setAttribute("fill","ffcc00")
+svg.appendChild(circle) 
+
+
+//方形
+var rect=createSvgElement("rect",{"x":300,"y":100,"width":100,"height":100,"fill":"blue"});
+svg.appendChild(rect)
+}
+
+
+*/
+
+//設計一個產生svg的原件
+function createSvgElement(tagName,attrs)
+{
+var element=document.createElementNS("http://www.w3.org/2000/svg",tagName); //產生任意的標籤
+for(var name in attrs)
+{element.setAttribute(name,attrs[name])}
+	return element
+}
+
+
+</script>
+</head>
+<body>
+<svg id="svg" width="500" height="500" style="border:1px solid #000000">
+<!--
+	<line x1="50 y="50" x2="350" y2="350" /*線段*/
+	stroke="red" stroke-width="5">
+	</line>
+	<circle cx="100" cy="200" r="50" /*圓形*/
+	fill="black">
+	</circle>
+	<rect x="300" y="100" width="100" height="100" /*方形*/
+	fill="blue">
+	</rect>
+	<polygon points="150,300,200,200,200,300" /*多邊形*/
+	fill="#ffcc00"> 
+	</polygon>
+	<text x="300" y="250" fill="green" font-size="15">你好嗎</text>
+-->
+</svg>
+</body>
+</html>
