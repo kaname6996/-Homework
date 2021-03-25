@@ -75,13 +75,16 @@
             float:left;
 	        position:relative;
             padding: 10px;
-            left:30%
+            left:30%;
+            border-bottom: #ccc 1px solid;
+            border: #ccc 1px solid;
             }
-        .no2>.no22>ul>li:hover{background-color: black;color:white}
-        .no2>.no22>ul>li>a:hover{color:white}
+        .no2>.no22>ul>li>ul:last-child{border-bottom: none}
+        
+
+        
         .no2>.no22>ul>li>a{text-decoration:none;color: black}
         .no2>.no23{flex:100%;padding: 10px;line-height:35px;padding-top: 30px;}
-        a:hover{color:green;}
 
 
         </style>
@@ -103,22 +106,16 @@
 
 
     <article>
-    <div class="no1">
-        <ul style="padding-top: 100px">
-            <li>文章列表
-                <ul>小說類</ul>
-                <ul>散文類</ul>
-            </li>
-            <li>其他計畫
-                <ul>郊遊</ul>
-                <ul>工作</ul>
-            </li>
-        </ul>        
-    </div>
+    <div class="no1"></div>
     <div class="no2">
         <div class="no22">      
         <ul>
-        <li class="a"><a href="#" >最新消息</a></li> 
+        <li class="a"><a href="#" >最新消息</a>
+        <ul>
+            <li>最新活動</li>
+            <li>最新計畫</li>
+        </ul>
+         </li>
         <li class="a"><a href="#" >歷史訊息</a></li>
         <li class="a"><a href="#" >個人簡介</a></li>
         <li class="a"><a href="#" >網站資料</a></li>
