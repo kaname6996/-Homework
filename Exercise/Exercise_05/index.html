@@ -10,31 +10,38 @@
     <style>
         body{margin: 0;}
 
-        .box{
+        header{
             display:flex;
             justify-content:space-between;
+            flex-direction: row;
             width: 100%;height: 30px;
             background-color: rgba(7, 7, 136, 0.582);
             color: white;
-            font-family: 'Train One', cursive;
+            
         }
         /*藍藍那條左邊*/
-        .box1{
+        header>.box1{
             flex:none;
-            width:10%
+            width:10%;
+            flex-grow: 0.5;
+            font-family: 'Train One', cursive
              }
 
         /*藍藍那條中間*/
-        .box2{
+        header>.box2{
             padding-right: 10px;
             display:flex;
             justify-content:space-between;
             padding: 5px;
+            flex-grow: 0.8;
+            font-family: "jf open 粉圓 1.1";
         }
         /*藍藍那條右邊*/
-        .box3{
-            padding-right: 10px;
+        header>.box3{
+            padding-right: 20px;
             width:60px;
+            flex-grow: 0.5;
+            font-family: "jf open 粉圓 1.1";
             }
 
             /*取消清單圖案*/
@@ -50,20 +57,44 @@
             width: 100%;height: 30px;
             background-color: rgba(105, 105, 117, 0.219);
             height: 800px;
+            font-family: "jf open 粉圓 1.1"
         }
         .no1{flex:none;width:200px;
         background-image: url(https://images.pexels.com/photos/2423398/pexels-photo-2423398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-        background-size: 100%;
-        opacity:0.5
+        background-size: 100%; 
+        display: flex;
+        align-items: stretch;
+
         }
+        article>.no1>ul{background-color:rgba(255, 255, 255, 0.534);
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        padding-top: 20px;
+        margin-top: 42px;border-radius:40px;
+        margin-left: 10px;margin-right: 10px;
+        list-style:none
+        }
+
+        article>.no1>ul>li>span{background-color: rgba(7, 7, 136, 0.582);color: white;
+        border-radius:5px;
+        padding: 1.5px;}
+       
+        ul>ul{padding-top: 10px;padding-left: 0;}
+        ul>ul>span:hover{background-color: black;color: white;cursor: pointer}
+        .no1>ul>li{padding-top: 5px;}
+
+
+
         .no3{flex:none;width:200px;
         background-image: url(https://images.pexels.com/photos/4120796/pexels-photo-4120796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-        background-size: 100%
+        background-size: 100%;
+        
         
         
         }
         .no2{flex:auto}
-        .no2>.no22{flex:100%;background-color: rgba(255, 255, 255, 0.541)}
+        .no2>.no22{flex:100%;background-color: rgba(255, 255, 255, 0.541);}
         .no2>.no22>ul{
             overflow: hidden;
             margin: 0;
@@ -75,7 +106,8 @@
             float:left;
 	        position:relative;
             padding: 10px;
-            left:30%
+            left:30%;
+            justify-content:space-around
             }
         .no2>.no22>ul>li:hover{background-color: black;color:white}
         .no2>.no22>ul>li>a:hover{color:white}
@@ -84,35 +116,45 @@
         a:hover{color:green;}
 
 
+
         </style>
 </head>
 <body>
-    <div class="box">
+    <header>
         <div class="box1" style="line-height: 30px;padding-left: 10px;">ABCDEFGHIJK</div>
         <div class="box2">
-            <img style="width:15px;margin-right: 5px;" title="黃" src="https://www.flaticon.com/svg/vstatic/svg/3571/3571135.svg?token=exp=1616069285~hmac=7f7f9bc78ee8da59ef8f547bb8e8d607">
             <input type="text" placeholder="Search..." style="line-height:10px;border-radius: 20px" >
         
         </div> 
         <div class="box2">
             <div class="box3">首頁</div>
             <div class="box3">個人</div>
-            <div class="box3">資料</div>        
+            <div class="box3" style="margin-right: 10px;">資料</div>        
         </div>
-    </div>
+    </header>
 
 
     <article>
     <div class="no1">
-        <ul style="padding-top: 100px">
-            <li>文章列表
-                <ul>小說類</ul>
-                <ul>散文類</ul>
-            </li>
-            <li>其他計畫
-                <ul>郊遊</ul>
-                <ul>工作</ul>
-            </li>
+        <ul>
+            <li><span>文章列表</span></li>
+                <ul><span>小說類</span></ul>
+                <ul><span>散文類</span></ul>
+                <ul><span>詩集類</span></ul>
+            
+
+            <li><span>影劇列表</span></li>
+                <ul><span>電視劇</span></ul>
+                <ul><span>電影、影集</span></ul>
+                <ul><span>動畫、卡通</span></ul>
+            
+            
+
+            <li><span>其他列表</span></li>
+                <ul><span>照片、攝影</span></ul>
+                <ul><span>繪畫</span></ul>
+                <ul><span>創作</span></ul>
+            
         </ul>        
     </div>
     <div class="no2">
