@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
 
 body{margin: 10px;
 display: flex;
 flex-direction: column;
-min-height: 100vh;
-;} /*填滿網頁*/
+min-height: 100vh;/*填滿網頁*/
+font-family: 'Noto Serif TC', serif;
+} 
 
 header{background-color: rgb(131, 174, 175);
-margin: 10px;padding: 10px;border-radius:20px}
+margin: 10px;padding: 10px;
+border-radius:20px;
+color: white;
+text-align: center;
+font-size: 30px;}
+
+
+
 nav{background-color: rgb(131, 174, 175);
 margin: 10px;border-radius:20px;
 padding: 10px}
@@ -24,7 +34,7 @@ margin: 10px;
 flex-grow: 1;border-radius:20px;
 padding: 10px
 }
-section{background-color: rgb(163, 196, 196);
+section{background-color: white;
 margin: 10px;
 margin-top: 50px;
 flex-grow: 2;
@@ -34,7 +44,8 @@ padding: 10px
 aside{background-color: rgb(131, 174, 175);
 margin: 10px;
 flex-grow: 0.5;border-radius:20px;
-padding: 10px
+padding: 20px;
+color: white;
 }
 footer{background-color: rgb(131, 174, 175);
 margin: 10px;border-radius:20px;
@@ -48,23 +59,42 @@ display: flex;
 flex-direction: row;border-radius:20px;
 justify-content:space-around;}
 
+li{list-style:none} /*移除列表圖案*/
 
     </style>
 </head>
 
 
 <body>
-<header>header</header>
+<header>個人簡歷</header>
 <nav>nav</nav>
 <div class="abc">
     <div class="qaz">
-        <article>articl
+        <article>個人介紹
             <section>
                 section
             </section>
         </article>
     </div>
-<aside>asside</aside>
+<aside>
+    學習背景
+    <hr/>
+    <ul>
+        <li>1</li>
+        <li>2014-2019</li>
+        <li>2019-</li>
+    </ul>
+    </br>
+    </br>
+    工作經歷
+    <hr/>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+</aside>
 </div>
 <footer>footer</footer>
 </body>
