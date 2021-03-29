@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
     <title>蘋果綠咖啡</title>
     <style>
-        body {margin:0px} /*對齊網頁上緣*/
+        body {margin:0px;font-family: 'Noto Serif TC', serif;} /*對齊網頁上緣*/
 
         /*上方黑線*/
         .box{background-color: rgb(27, 66, 24);height: 10px;}
@@ -25,7 +27,9 @@
             text-align: center; /*水平對齊*/
             line-height: 50px; /*置中*/
             }
-        .box2:hover{background-color:black;color: white;}
+        .box2>a{width: 100%;height: 100%;}
+        .box2:hover{background-color:black;color: white;cursor: pointer;}
+
         
         /*漂浮小盒子*/
         .float>img{width:188px;height: 125px;border-radius:20px;
@@ -45,13 +49,13 @@
 
 
     <header><!--目錄-->
-        <div class="box2"><a>新品介紹</a></div>
-        <div class="box2">全部商品</div>
-        <div class="box2">門市資訊</div>
-        <div class="box2">企業責任</div>
-        <div class="box2">訂位資訊</div>
-        <div class="box2">線上門市</div>
-        <div class="box2">加入我們</div>
+        <div class="box2" onclick="location.href='index.html'">首頁</div>
+        <div class="box2" onclick="location.href='全部商品.html'">全部商品</div>
+        <div class="box2" onclick="location.href='門市資訊.html'">門市資訊</div>
+        <div class="box2" onclick="location.href='企業責任.html'">企業責任</div>
+        <div class="box2" onclick="location.href='訂位資訊.html'">訂位資訊</div>
+        <div class="box2" onclick="location.href='線上門市.html'">線上門市</div>
+        <div class="box2" onclick="location.href='加入我們.html'">加入我們</div>
     </header>
     <div class="float"><!--漂浮小盒子-->
         <img src="D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\未命名.png">

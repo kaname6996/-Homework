@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蘋果綠咖啡</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+
     <style>
-        body {margin:0px} /*對齊網頁上緣*/
+        body {margin:0px;font-family: 'Noto Serif TC', serif;} /*對齊網頁上緣*/
 
         /*上方黑線*/
         .box{background-color: rgb(27, 66, 24);height: 10px;}
@@ -30,9 +33,22 @@
 
         
         /*漂浮小盒子*/
-        .float>img{width:188px;height: 125px;border-radius:20px;
-        position:fixed;right: 50px;top:200px}
+        .float>img{width:188px;height: 125px;
+        position:fixed;right: 10px;top:200px}
 
+
+        /*圖片(會變大變小的)*/
+        section{display: inline-flex;
+        flex-direction:row;
+        flex-wrap:nowrap;
+        justify-content:center;
+        overflow:hidden}
+
+        section>img{width: 100px;height: 100px;
+        margin-left: 100px;margin-bottom: 20px;
+        overflow:hidden}
+
+        
         /*聯絡方法*/
         nav{background-color: rgba(165, 150, 150, 0.144);padding-left: 200px;display: flex;}
         nav>div>img{width:35px;height:35px;margin-left: 10px;margin-top: 60px;}
@@ -41,27 +57,80 @@
         /*底下黑線*/
         footer{background-color: black;height: 10px;margin-top: 5px;}
     </style>
+
+    
+    <script type="text/javascript">
+        function 
+        show(no)
+        {
+        var box=document.getElementById("box"+no);
+        var boxstyle=window.getComputedStyle(box) //取得當前的尺寸設定
+        var size=boxstyle.getPropertyValue("width") //取的哪一個CSS屬性 得到50px寬度設定
+        size=parseInt(size) //轉換成數值 :50px>50
+        var animed=window.setInterval(//產生一個放大的動畫特效:setInterval排程+(1)函式(2)執行間隔時間
+        function(){
+        //設定停止條件
+        if (size>150){window.clearInterval(animed);return} //排程IDanimed 清除排程
+        size++; //數值調完後放進css設定中
+        box.style.width=size+"px";
+        box.style.height=size+"px";
+        },1)  //每0.02秒執行一次函式
+        }
+
+        function showout(no)
+        {
+        var box=document.getElementById("box"+no);
+        var boxstyle=window.getComputedStyle(box) //取得當前的尺寸設定
+        var size=boxstyle.getPropertyValue("width") //取的哪一個CSS屬性 得到50px寬度設定
+        size=parseInt(size) //轉換成數值 :50px>50
+        var animed=window.setInterval(//產生一個放大的動畫特效:setInterval排程+(1)函式(2)執行間隔時間
+        function(){
+        //設定停止條件
+        if (size<100){window.clearInterval(animed);return} //排程IDanimed 清除排程
+        size=size-1; //數值調完後放進css設定中
+        box.style.width=size+"px";
+        box.style.height=size+"px";
+        },1)  //每0.02秒執行一次函式
+        }
+	
+        </script> 
+
 </head>
 <body>
     <div class="box"></div><!--上邊黑線-->
 
 
     <header><!--目錄-->
-        <div class="box2" onclick="location.href='D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\新品介紹.html'">新品介紹</div>
-        <div class="box2" onclick="location.href='D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\全部商品.html'">全部商品</div>
-        <div class="box2" onclick="location.href='D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\門市資訊.html'">門市資訊</div>
-        <div class="box2" onclick="location.href='D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\企業責任.html'">企業責任</div>
-        <div class="box2" onclick="location.href='D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\訂位資訊.html'">訂位資訊</div>
-        <div class="box2" onclick="location.href='D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\線上門市.html'">線上門市</div>
-        <div class="box2" onclick="location.href='D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\加入我們.html'">加入我們</div>
+        <div class="box2" onclick="location.href='index.html'">首頁</div>
+        <div class="box2" onclick="location.href='全部商品.html'">全部商品</div>
+        <div class="box2" onclick="location.href='門市資訊.html'">門市資訊</div>
+        <div class="box2" onclick="location.href='企業責任.html'">企業責任</div>
+        <div class="box2" onclick="location.href='訂位資訊.html'">訂位資訊</div>
+        <div class="box2" onclick="location.href='線上門市.html'">線上門市</div>
+        <div class="box2" onclick="location.href='加入我們.html'">加入我們</div>
     </header>
     <div class="float"><!--漂浮小盒子-->
         <img src="D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\未命名.png">
     </div> 
-    <article><!--底圖-->
+    <article><!--正中圖片-->
     <img class="pic" src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/93044/starb.jpg_1140x855.jpg">
     </article>
-    <nav> 
+
+
+    <!--下方圖片-->
+    <section >
+        <img src="https://picsum.photos/300/300?random=10" id="box1" onmouseover="show(1)" onmouseout="showout(1)" >
+        <img src="https://picsum.photos/300/300?random=20" id="box2" onmouseover="show(2)" onmouseout="showout(2)">
+        <img src="https://picsum.photos/300/300?random=30" id="box3" onmouseover="show(3)" onmouseout="showout(3)">
+        <img src="https://picsum.photos/300/300?random=40" id="box4" onmouseover="show(4)" onmouseout="showout(4)">
+        <img src="https://picsum.photos/300/300?random=50" id="box5" onmouseover="show(5)" onmouseout="showout(5)">
+        <img src="https://picsum.photos/300/300?random=30" id="box6" onmouseover="show(6)" onmouseout="showout(6)">
+        <img src="https://picsum.photos/300/300?random=40" id="box7" onmouseover="show(7)" onmouseout="showout(7)" >
+    </section>
+
+
+
+    <nav> <!--聯絡方式-->
         <div>
         <img  src="D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\facebook.png">
         <img  src="D:\aaaaaaaaa程式語言\新尖兵\bbbb\Exercise\Exercise_05\小組\instagram.png">
