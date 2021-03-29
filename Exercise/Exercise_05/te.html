@@ -4,17 +4,58 @@
 <title>下拉式選單例項|線上程式語言教學練習(twcode01.com)</title>
 <meta charset="utf-8">
 <style>
+    /*選單*/
 .linkslist {margin: 0px; padding: 0px; } /*←框框*/
 .linkslist li { display: none; } /*←讓項目藏起來*/
 .linkslist:hover h2 {width: 200px; }/*←標題，寬度固定只是要讓它看起來整齊一點。*/
 .linkslist:hover li { 
     display: block; width: 200px; 
     text-align: center; line-height: 140%; }/*←讓項目顯示出來*/
+
+/*翻頁*/
+.con{
+            width:249px;
+            height:299px;
+            margin:100px auto 0;
+            position:relative;
+            transform-style: preserve-3d;
+        }
+
+        .pic, .pic3{
+            width:249px;
+            height:299px;
+            position:absolute;
+            left:0;
+            top:0;
+            /*隱藏背面圖片*/
+            backface-visibility: hidden;
+            transition: all 1s ease;
+            /*防止跳變bug*/
+            transform:perspective(800px) rotateY(0deg) ;
+        }
+
+        .pic3{
+            width:249px;
+            height:299px;
+            line-height: 299px;
+            transform: translateZ(2px) rotateY(180deg);
+        }
+
+        .con:hover .pic{
+            transform: perspective(800px) rotateY(180deg);
+        }
+
+        .con:hover .pic3{
+            transform: perspective(800px) rotateY(0deg);
+        }
+
+
+
 </style>
 </head>
 <body>
 
-
+    <!--選單-->
     <ul class=”linkslist”>
         <h2>站內分類</h2>
         <li><a href=”#分類一”>分類一</a></li>
@@ -23,5 +64,13 @@
         <li>分類四</li>
         <li>分類五</li>
         </ul>
+
+
+        <!--翻頁-->
+        <div class="con">
+            <div class="pic1"><img src="https://picsum.photos/300/300?random=10" alt="小鴨子"></div>
+            <div class="pic3"><img src="https://picsum.photos/300/300?random=30" alt="小鴨子"></div>
+
+        </div>
 </body>
 </html>
