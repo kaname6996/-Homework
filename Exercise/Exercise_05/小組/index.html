@@ -7,8 +7,18 @@
     <title>蘋果綠咖啡</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <script type="text/javascript" >
+            $(document).ready(function()
+            {
+            $("#flip").click(function(){
+            $(".panel").slideToggle("slow");
+            });
+            });
+    </script>
 
-    <style>
+<style>
         body {margin:0px;font-family: 'Noto Serif TC', serif;} /*對齊網頁上緣*/
 
         /*上方黑線*/
@@ -21,6 +31,20 @@
             display:flex;
             justify-content:center /**/
             }
+        header>.panel,#flip
+            {
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            }
+        header>.panel
+            {
+            height:120px;
+            display:none;
+            padding:0px;
+            cursor: pointer
+            }
+            
         .box2{
             background-color:white;
             width:10%;height:50px;
@@ -102,7 +126,11 @@
 
     <header><!--目錄-->
         <div class="box2" onclick="location.href='index.html'">首頁</div>
-        <div class="box2" onclick="location.href='全部商品.html'">全部商品</div>
+        <div class="box2" id="flip" >全部商品</div>
+        <div class="panel">
+        <p onclick="location.href='全部商品.html'">查看菜單</p>
+        <p onclick="location.href='新品介紹.html'">最新商品</p>
+        </div>
         <div class="box2" onclick="location.href='門市資訊.html'">門市資訊</div>
         <div class="box2" onclick="location.href='企業責任.html'">企業責任</div>
         <div class="box2" onclick="location.href='訂位資訊.html'">訂位資訊</div>

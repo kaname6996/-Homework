@@ -11,7 +11,15 @@
     
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
-    <script type="text/javascript" src="turn.min.js"></script>
+    <script type="text/javascript" src="turn.min.js">
+            $(document).ready(function()
+            {
+            $("#flip").click(function(){
+            $(".panel").slideToggle("slow");
+            });
+            });
+    </script>
+
     <!--不知道是什麼總之是菜單的東西-->
     <script type="text/javascript" src="modernizr.2.5.3.min.js"></script>
 
@@ -29,6 +37,19 @@
         header{
             display:flex;
             justify-content:center /**/
+            }
+        header>.panel,#flip
+            {
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            }
+        header>.panel
+            {
+            height:120px;
+            display:none;
+            padding:0px;
+            cursor: pointer
             }
         .box2{
             background-color:white;
@@ -62,7 +83,11 @@
 
     <header><!--目錄-->
         <div class="box2" onclick="location.href='index.html'">首頁</div>
-        <div class="box2" onclick="location.href='全部商品.html'">全部商品</div>
+        <div class="box2" id="flip">全部商品</div>
+        <div class="panel">
+        <p onclick="location.href='全部商品.html'">查看菜單</p>
+        <p onclick="location.href='新品介紹.html'">最新商品</p>
+        </div>
         <div class="box2" onclick="location.href='門市資訊.html'">門市資訊</div>
         <div class="box2" onclick="location.href='企業責任.html'">企業責任</div>
         <div class="box2" onclick="location.href='訂位資訊.html'">訂位資訊</div>
