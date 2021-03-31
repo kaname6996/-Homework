@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課表!!!!!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style >
+
+    table{text-align:center;border-collapse: collapse;border: rgba(255, 99, 71, 0.493) 5px solid}
+    body{font-size: 16px;font-family: 'jf open 粉圓 1.1';}
+    caption{font-size: 60px}
+    caption>span{font-family: 'Berkshire Swash'}
+    th{background-color: rgb(247, 226, 186);border-radius:20px}
+    td{font-family: 'Shadows Into Light';border-radius:2px}
+    td>span{font-family: 'Berkshire Swash'}
+    td>#aaa{color:rgb(243, 123, 75)}
+    td>span{font-family: 'Berkshire Swash'}
+    .op{background-color: rgb(247, 226, 186);border-radius:20px}
+    #ooo{text-align: right;background-color: rgb(247, 226, 186);border-radius:20px}
+    #ooo>span{color:red}
+    td:hover {
+        background-color: rgb(207, 170, 192);
+              }
+    /* grid*/
+    body{display: grid;
+    grid-template: auto 1fr auto/1fr 2fr 1fr;
+    min-height: 100vh}
+    header{background-color: #2f5d62;
+    color: white;
+      grid-column: 1 / 4;
+      text-align: center;
+      font-size: 30px;}
+    .right-side{background-color: #f7efd38a;
+      background-image: url(https://images.pexels.com/photos/4825674/pexels-photo-4825674.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-position: center;}
+    
+    .main{background-color:white;padding-left: 180px;padding-top: 50px;}
+    .left-side{background-color: #fcf3cf;
+    background-image: url(https://images.pexels.com/photos/4825674/pexels-photo-4825674.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-position: center;}
+
+    footer{background-color: #2f5d62;
+    color: white;
+      grid-column: 1 / 4;
+      text-align: center}
+
+
+
+
+      /*表格樣式*/
+    table{text-align:center;border-collapse: collapse;border: rgba(255, 99, 71, 0.493) 5px solid}
+    body{font-size: 16px;font-family: 'jf open 粉圓 1.1';}
+    caption{font-size: 60px}
+    caption>span{font-family: 'Berkshire Swash'}
+    th{background-color: rgb(247, 226, 186);border-radius:20px}
+    td{font-family: 'Shadows Into Light';border-radius:2px}
+    td>span{font-family: 'Berkshire Swash'}
+    td>#aaa{color:rgb(243, 123, 75)}
+    td>span{font-family: 'Berkshire Swash'}
+    .op{background-color: rgb(247, 226, 186);border-radius:20px}
+    #ooo{text-align: right;background-color: rgb(247, 226, 186);border-radius:20px}
+    #ooo>span{color:red}
+    td:hover {
+        background-color: rgb(207, 170, 192);
+              }
+      
+    </style>
+    
+  </head>
+<body>
+<header>課表課表課表</header>
+<div class="left-side"></div>
+<div class="main">
+  <table width="400" border="15px">
+    <caption>課<span>123</span>表</caption>
+      <tr>
+        <th></th>
+        <th style="text-shadow: 2px 2px 2px red">星期一</th>
+        <th style="text-shadow: 2px 2px 2px red">星期二</th>
+        <th style="text-shadow: 2px 2px 2px red">星期三</th>
+        <th style="text-shadow: 2px 2px 2px red">星期四</th>
+        <th style="text-shadow: 2px 2px 2px red">星期五</th>
+      </tr>
+      <tr>
+        <td ><b>09:10</b></td>
+        <td><span>python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+        <td>軟體工程專題</td>
+        <td id=aaa><b><i><u><span>python</span>基礎程式設計</u></i></b></td>
+        <td>web基礎程式設計</td>
+      </tr>
+      <tr>
+        <td ><b>10:10</b></td>
+        <td><span >python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+        <td>軟體工程專題</td>
+        <td><span >python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+      </tr>
+      <tr>
+        <td>11:10</td>
+        <td><span >python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+        <td>軟體工程專題</td>
+        <td><span>python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+      </tr>
+      <tr>
+        <td >12:10</td>
+        <td colspan="5" class=op style="text-shadow: 2px 2px 2px red">午休</td>
+      </tr>
+      <tr>
+        <td>13:10</td>
+        <td><span >python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+        <td>軟體工程專題</td>
+        <td><span>python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+      </tr>
+      <tr>
+        <td>14:10</td>
+        <td><span>python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+        <td>軟體工程專題</td>
+        <td><span>python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+      </tr>
+      <tr>
+        <td>15:10</td>
+        <td><span>python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+        <td>軟體工程專題</td>
+        <td><span>python</span>基礎程式設計</td>
+        <td>web基礎程式設計</td>
+      </tr>
+      <tr>
+        <td>16:10</td>
+        <td id=ooo colspan="5"><sup>上標</sup><span><del>123</del></span><sub>下標</sub></td>
+      </tr>
+      </table>
+</div>
+<div class="right-side"></div>
+<footer>footer</footer>
+</body>
+</html>
