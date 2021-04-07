@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{margin: 0;font-family: 'Noto Serif TC', serif;}
+        header{background-color: rgb(231, 179, 179);display: flex;justify-content: space-between;padding-left: 20px;padding-right: 20px;
+        height: 60px;line-height: 60px;}
+        .C1{display: flex;;}
+        .C2{padding-right: 20px}
+
+        
+        article{background-color: azure;min-height:88vh;display: flex;}
+        .A1{flex:none; width: 200px;}
+        .A2{flex:auto;display: flex;}
+        /*旁邊圖片*/
+        .A21{width: 15%;text-align: center;margin: 10px;;}
+        .A21>div{line-height: 40px;}
+
+        /*中間圖片*/
+        .A22{width: 85%;margin: 10px;display: flex;flex-wrap: wrap;
+            align-content:stretch;font-size: 10px;}
+        
+        .A22>div{width:28%;margin: 10px;padding-left: 8px;text-align: center;}
+
+        .A221{display: flex;justify-content: space-around;}
+        .A222{text-align: center;height:40%;line-height:70px;font-size:30px;}
+
+
+
+        .A3{flex:none;width: 250px;}
+        footer{background-color: rgb(180, 197, 197);text-align: center;}
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div style="font-size: 20px;">my shop</div> 
+        <div class="C1">
+            <div class="C2">商品</div> 
+            <div class="C2">購物車</div>        
+        </div>
+    </header>
+    <article>
+        <div class="A1"></div>
+        <div class="A2">
+            <div class="A21">
+                <div>商品分類</div>
+                <div>所有商品</div>
+                <div>暢銷商品</div>
+                <div>本日精選</div>
+                <div>新品上市</div>
+            </div>
+            <!--中間圖片-->
+            <div class="A22">
+            <div>
+                <img src="https://i.imgur.com/ZMpETy0b.gif"> 
+                <div class="A221">
+                    <div>蛋糕</div>
+                    <div><button>加入購物車</button></div>
+                </div> 
+                <div class="A222">NT$150</div>
+            </div>
+            <div><img src="https://i.imgur.com/ODZ7Zpzb.jpg">
+                <div class="A221">
+                    <div>蛋糕</div>
+                    <div><button>加入購物車</button></div>
+                </div> 
+                <div class="A222">NT$150</div>
+            </div>
+            <div><img src="https://i.imgur.com/qT3MWAbb.jpg">
+                <div class="A221">
+                    <div>蛋糕</div>
+                    <div><button>加入購物車</button></div>
+                </div> 
+                <div class="A222">NT$150</div>
+            </div>
+            <div><img src="https://i.imgur.com/2G16qPab.jpg">
+                <div class="A221">
+                    <div>蛋糕</div>
+                    <div><button>加入購物車</button></div>
+                </div> 
+                <div class="A222">NT$150</div>
+            </div>
+            <div><img src="https://i.imgur.com/fziT4jzb.gif">
+                <div class="A221">
+                    <div>蛋糕</div>
+                    <div><button>加入購物車</button></div>
+                </div> 
+                <div class="A222">NT$150</div>
+            </div>
+            </div>
+        </div>
+        <div class="A3"></div>
+    </article>
+    <footer>
+        2021 myshop all rights reserved.
+    </footer>
+</body>
+</html>
