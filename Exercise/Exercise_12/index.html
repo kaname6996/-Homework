@@ -6,21 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{display: grid;
-        grid-template: auto 1fr auto /repeat(7,1fr);
+        body{display: grid;margin: 0;
+        grid-template: auto repeat(2,1fr) auto /repeat(6,1fr);
         min-height: 100vh;}
+        .c0{font-size: 40px;background-color: blanchedalmond;text-align: center;line-height: 60px}
+        .c1{grid-column:2/6;background-color: blanchedalmond}
+        .c2{text-align: center;font-size: 30px;background-color: blanchedalmond;line-height: 60px;}
+        .c3{text-align: right;padding-right: 40px;padding-top: 40px;}
+        .c4{padding-top: 40px;}
+        .c5{grid-column:1/7;text-align: center;background-color: cadetblue;line-height: 30px}
         
     </style>
 </head>
 <body>
-    <div>my shop </div>
-    <div class="c1">2</div>
-    <div>3</div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
+    <div class="c0">my shop </div>
+    <div class="c1"></div>
+    <div class="c2">商品 購物車</div>
+    <div></div>
+    <div class="c3">商品分類</br></br>所有商品</br></br>暢銷商品</br></br>本日精選</br></br>新品上市</div>
+
+    <div class="c4"><img src="https://i.imgur.com/ZMpETy0b.gif">
+    </br>蛋糕 <span>　　　</span><button>加入購物車</button>
+    </div>
+    <div class="c4"><img src="https://i.imgur.com/ODZ7Zpzb.jpg">
+    </br>滿滿的點心 <span></span><button>加入購物車</button>
+    </div>
+    <div class="c4"><img src="https://i.imgur.com/qT3MWAbb.jpg">
+    </br>紅色的 <span>　　</span><button>加入購物車</button>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="c4"><img src="https://i.imgur.com/2G16qPab.jpg">
+    </br>蛋糕 <span>　　　</span><button>加入購物車</button>
+    </div>
+    <div class="c4"><img src="https://i.imgur.com/fziT4jzb.gif">
+    </br>魔術方塊 <span>　</span><button>加入購物車</button>
+    </div>
+    <div class="c5">2021 myshop all rights reserved.</div>
 </body>
 </html>
